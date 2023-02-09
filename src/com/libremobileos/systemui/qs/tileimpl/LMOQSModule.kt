@@ -20,6 +20,7 @@ import com.android.systemui.qs.tileimpl.QSTileImpl
 
 import com.libremobileos.systemui.qs.tiles.AmbientDisplayTile
 import com.libremobileos.systemui.qs.tiles.AODTile
+import com.libremobileos.systemui.qs.tiles.BluetoothDialogTile
 import com.libremobileos.systemui.qs.tiles.CaffeineTile
 import com.libremobileos.systemui.qs.tiles.CellularTile
 import com.libremobileos.systemui.qs.tiles.DataSwitchTile
@@ -50,6 +51,12 @@ interface LMOQSModule {
     @IntoMap
     @StringKey(AODTile.TILE_SPEC)
     fun bindAODTile(aodTile: AODTile): QSTileImpl<*>
+
+    /** Inject BluetoothDialogTile into tileMap in QSModule */
+    @Binds
+    @IntoMap
+    @StringKey(BluetoothDialogTile.TILE_SPEC)
+    fun bindBluetoothDialogTile(bluetoothDialogTile: BluetoothDialogTile): QSTileImpl<*>
 
     /** Inject CaffeineTile into tileMap in QSModule */
     @Binds
