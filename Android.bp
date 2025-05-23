@@ -19,7 +19,7 @@ package {
 }
 
 android_library {
-    name: "LMOSystemUI-core",
+    name: "LumineSystemUI-core",
     srcs: [
         "src/**/*.kt",
         "src/**/*.java",
@@ -39,13 +39,13 @@ android_library {
 }
 
 android_app {
-    name: "LMOSystemUI",
+    name: "LumineSystemUI",
     defaults: [
         "platform_app_defaults",
         "SystemUI_optimized_defaults",
     ],
     static_libs: [
-        "LMOSystemUI-core"
+        "LumineSystemUI-core"
     ],
     overrides: [
         "SystemUI",
@@ -66,14 +66,14 @@ android_app {
     },
     required: [
         "privapp_whitelist_com.android.systemui",
-        "privapp_whitelist_com.libremobileos.systemui",
+        "privapp_whitelist_org.luminedroid.systemui",
     ],
 }
 
 prebuilt_etc {
-    name: "privapp_whitelist_com.libremobileos.systemui",
+    name: "privapp_whitelist_org.luminedroid.systemui",
     system_ext_specific: true,
     sub_dir: "permissions",
-    src: "com.libremobileos.systemui.xml",
+    src: "org.luminedroid.systemui.xml",
     filename_from_src: true,
 }

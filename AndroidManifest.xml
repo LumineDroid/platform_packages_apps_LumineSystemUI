@@ -29,7 +29,7 @@
 
     <application
         tools:replace="android:appComponentFactory"
-        android:appComponentFactory="com.libremobileos.systemui.LMOSystemUIAppComponentFactory">
+        android:appComponentFactory="org.luminedroid.systemui.LumineSystemUIAppComponentFactory">
 
         <provider
             android:name="com.android.systemui.keyguard.KeyguardSliceProvider"
@@ -37,7 +37,7 @@
         </provider>
 
         <provider
-            android:name="com.libremobileos.systemui.keyguard.LMOKeyguardSliceProvider"
+            android:name="org.luminedroid.systemui.keyguard.LumineKeyguardSliceProvider"
             android:authorities="com.android.systemui.keyguard"
             android:enabled="true"
             android:exported="true"
